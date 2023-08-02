@@ -1,4 +1,6 @@
-"""'Must specify access token via Authorization header. https://developer.github.com/changes/2020-02-10-deprecating-auth-through-query-param' hatası çözümü hakkında"""
+"""'Must specify access token via Authorization header. https://developer.github.com/changes/2020-02-10-deprecating-auth-through-query-param' hatası çözümü hakkında
+ve Sadık Turan'ın api uygulama dersi kodu
+"""
 
 import requests
 
@@ -6,7 +8,7 @@ class Github:
     def __init__(self):
         self.api_url = "https://api.github.com"
         self.token = "########################################" # <== Token buraya yazılacak
-        self.headers = {"Authorization": "token "+self.token}
+        self.headers = {"Authorization": "token "+self.token} # Token'ı headers olarak göndermemiz gerekiyormuş. 
     def getUser(self,userName):
         response = requests.get(self.api_url+"/users/"+ userName)
         return response.json()
