@@ -1,3 +1,5 @@
+"""'Must specify access token via Authorization header. https://developer.github.com/changes/2020-02-10-deprecating-auth-through-query-param' hatası çözümü hakkında"""
+
 import requests
 
 class Github:
